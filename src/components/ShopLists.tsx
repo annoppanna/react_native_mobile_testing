@@ -209,7 +209,7 @@ export const ShopLists: React.FC<ShopListsProps> = ({items: []}) => {
             horizontal={true}
             contentContainerStyle={{
               columnGap: 12,
-              paddingVertical: 10,
+              paddingTop: 10,
               backgroundColor: '#fff',
               marginTop: 4,
             }}>
@@ -319,7 +319,6 @@ const styles = StyleSheet.create({
   },
 
   shopContainer: {
-    padding: 8,
     borderWidth: 1,
     borderRadius: 8,
     flexDirection: 'row',
@@ -339,6 +338,7 @@ const styles = StyleSheet.create({
     height: 112,
   },
   productContainer: {
+    marginBottom: 4,
     borderWidth: 1,
     borderRadius: 16,
     flexDirection: 'column',
@@ -383,9 +383,13 @@ const styles = StyleSheet.create({
   },
   shadowBox: {
     shadowColor: 'black',
-    shadowOpacity: 0.2,
-    shadowRadius: 8,
-    elevation: 2,
+    shadowOpacity: 0.15,
+    shadowRadius: 3,
+    shadowOffset: {
+      width: 2,
+      height: 2,
+    },
+    elevation: 1,
     backgroundColor: 'white',
   },
   tagLogoImage: {
