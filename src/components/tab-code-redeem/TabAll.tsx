@@ -12,12 +12,12 @@ import {ThemedView} from '../ThemedView';
 import {ThemedText} from '../ThemedText';
 import {Divider} from '../Divider';
 import {useNavigation} from '@react-navigation/native';
+import {Fonts} from '../../styles/fonts';
 
 export const TabAll: React.FC<any> = () => {
   const [value, setValue] = React.useState('');
 
   const navigation = useNavigation() as any;
-  // const router = useRouter();
   return (
     <ThemedView style={styles.container}>
       <View style={styles.searchContainer}>
@@ -56,7 +56,7 @@ export const TabAll: React.FC<any> = () => {
           <TouchableHighlight
             key={index}
             onPress={() => {
-              navigation.navigate('CodeRedeemDetails', {id: index});
+              navigation.navigate('code-redeem-details', {id: index});
             }}
             underlayColor="white">
             <View
@@ -168,11 +168,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    fontFamily: 'NotoSansThai',
+    fontFamily: Fonts.NotoSansThai,
   },
 
   searchContainer: {
-    fontFamily: 'NotoSansThai',
+    fontFamily: Fonts.NotoSansThai,
     flexDirection: 'row',
     borderWidth: 1,
     borderColor: '#DFE4EA',
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
   inputStyle: {
     flex: 1,
     fontSize: 14,
-    fontFamily: 'NotoSansThai',
+    fontFamily: Fonts.NotoSansThai,
   },
   tagCodeRedeem: {
     width: 69,

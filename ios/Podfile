@@ -26,6 +26,8 @@ target 'react_native_testing_mobile' do
   target 'react_native_testing_mobileTests' do
     inherit! :complete
     # Pods for testing
+
+    pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   end
 
   post_install do |installer|

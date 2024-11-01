@@ -6,8 +6,6 @@ import {ThemedText} from '../components/ThemedText';
 import {Divider} from '../components/Divider';
 
 export default function CodeRedeemDetailScreen({route}: any) {
-  // const params = useLocalSearchParams();
-  // const {id} = params as any;
   const {id} = route.params;
 
   return (

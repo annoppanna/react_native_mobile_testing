@@ -12,6 +12,7 @@ import {ThemedView} from '../ThemedView';
 import {ThemedText} from '../ThemedText';
 import {Divider} from '../Divider';
 import {useNavigation} from '@react-navigation/native';
+import {Fonts} from '../../styles/fonts';
 
 export const TabDiscount: React.FC<any> = () => {
   const [value, setValue] = React.useState('');
@@ -28,14 +29,17 @@ export const TabDiscount: React.FC<any> = () => {
         />
         <View
           style={{
-            paddingVertical: 6,
-            paddingHorizontal: 16,
+            paddingVertical: 8,
+            paddingHorizontal: 12,
             backgroundColor: '#D9D9D9',
             borderRadius: 10,
           }}>
           <ThemedText
+            type="defaultSemiBold"
             style={{
+              fontSize: 14,
               color: '#B4B4B4',
+              lineHeight: 24,
             }}>
             ตกลง
           </ThemedText>
@@ -52,7 +56,7 @@ export const TabDiscount: React.FC<any> = () => {
           <TouchableHighlight
             key={index}
             onPress={() => {
-              navigation.navigate('CodeRedeemDetails', {id: index});
+              navigation.navigate('code-redeem-details', {id: index});
             }}
             underlayColor="white">
             <View
@@ -165,23 +169,24 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    fontFamily: 'NotoSansThai',
+    fontFamily: Fonts.NotoSansThai,
   },
 
   searchContainer: {
-    fontFamily: 'NotoSansThai',
+    fontFamily: Fonts.NotoSansThai,
     flexDirection: 'row',
     borderWidth: 1,
     borderColor: '#DFE4EA',
     borderRadius: 12,
-    padding: 16,
+    paddingVertical: 8,
+    paddingHorizontal: 8,
     marginTop: 8,
     marginBottom: 18,
   },
   inputStyle: {
     flex: 1,
     fontSize: 14,
-    fontFamily: 'NotoSansThai',
+    fontFamily: Fonts.NotoSansThai,
   },
   tagCodeRedeem: {
     width: 69,
