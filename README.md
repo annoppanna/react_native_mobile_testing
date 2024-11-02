@@ -12,13 +12,14 @@
 ## Step 2: Start the Metro Server
 
 ```bash
-# using npm
 npx react-native start
 ```
 
 ## Step 3: Start your Application
 
 ```bash
-Let Press a to run an adroid
+Let Press a to run an android
+Let Press i to run an ios
+
 #Note :  Please make sure you open an Emulator
 ```
