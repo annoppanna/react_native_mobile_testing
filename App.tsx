@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, useColorScheme, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -15,14 +15,12 @@ import {Fonts} from './src/styles/fonts';
 const Stack = createNativeStackNavigator();
 
 function App(): React.JSX.Element {
-  const colorScheme = useColorScheme();
-
   return (
     <SafeAreaProvider>
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
-            headerTintColor: Colors[colorScheme ?? 'light'].headerText,
+            headerTintColor: Colors['light'].headerText,
             headerShown: true,
             headerShadowVisible: false,
           }}

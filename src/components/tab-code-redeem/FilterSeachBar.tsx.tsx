@@ -17,6 +17,7 @@ export const FilterSeachBar: React.FC<FilterSeachBarProps> = (
       <TextInput
         style={styles.inputStyle}
         placeholder="เพิ่มโค้ดส่วนลด"
+        placeholderTextColor="gray"
         onChangeText={text => onChange(text)}
         value={value}
       />
