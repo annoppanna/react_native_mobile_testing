@@ -24,6 +24,7 @@ function App(): React.JSX.Element {
           screenOptions={{
             headerTintColor: Colors[colorScheme ?? 'light'].headerText,
             headerShown: true,
+            headerShadowVisible: false,
           }}
           initialRouteName="home">
           <Stack.Screen
